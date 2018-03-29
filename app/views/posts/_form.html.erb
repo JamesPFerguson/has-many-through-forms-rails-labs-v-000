@@ -1,8 +1,8 @@
 <%= form_for @post do |f| %>
-  <%= f.label :title %><br>
-  <%= f.text_field :title %><br>
-  <%= f.label :content %><br>
-  <%= f.text_area :content %><br>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
   <%= f.collection_check_boxes :category_ids, Category.all, :id, :name%>
 
   <%= f.fields_for :categories, @post.categories.build do |category| %>
